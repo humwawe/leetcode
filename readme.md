@@ -59,3 +59,14 @@ prev = cur;
 >基于一般情况数字是从大到小的，若中间有个小数字，则需要减去小数字
 # 14. Longest Common Prefix
 没有采用先求最小的长度来定义循环边界，而是一直循环，`catch`抛出的异常，需要注意边界和抛出异常的`index`位置
+# 15. 3Sum
+排序后，`c = a + b`,对每一个`c`进行计算，用两个指针移动
+``` java
+if (i == 0 || (i > 0 && nums[i] != nums[i - 1]))
+while (left < right && nums[left] == nums[left + 1]) left++;
+while (left < right && nums[right] == nums[right - 1]) right--;
+```
+>优化的地方时考虑如果值相同，就继续移动，这样可以不用set判重复
+# 3Sum Closest
+排序、双指针。 
+>三个数加起来，太大就移动右指针，太小就移动左指针
