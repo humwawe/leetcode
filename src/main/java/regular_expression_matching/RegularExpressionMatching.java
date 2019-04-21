@@ -19,7 +19,7 @@ public class RegularExpressionMatching {
         if (p.charAt(1) == '*') {
             int i = 0;
             while (i <= s.length() && (i == 0 || s.charAt(i - 1) == p.charAt(0) || p.charAt(0) == '.')) {
-                if (isMatch(s.substring(i), p.substring(2)) == true) {
+                if (isMatch(s.substring(i), p.substring(2))) {
                     return true;
                 }
                 i++;

@@ -5,7 +5,7 @@ package longest_palindromic_substring;
  */
 public class LongestPalindromicSubstring {
     public String longestPalindrome(String s) {
-        int left = 0, rihgt = 0;
+        int left, rihgt;
         int length = s.length();
         int max = 0;
         String result = "";
