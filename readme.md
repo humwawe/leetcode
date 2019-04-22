@@ -72,3 +72,23 @@ while (left < right && nums[right] == nums[right - 1]) right--;
 >三个数加起来，太大就移动右指针，太小就移动左指针
 # 17. Letter Combinations of a Phone Number
 循环加递归
+# 18. 4Sum
+排序后遍历计算前两个数的和，并用指针来指向后两个数
+>有个优化的点前两层循环固定某个数的情况下，若最大值或最小值有问题，便提前结束
+```java
+// first loop
+if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) {
+    break;
+}
+if (nums[i] + nums[len - 1] + nums[len - 2] + nums[len - 3] < target) {
+    continue;
+}
+// second loop
+if (nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target) {
+    break;
+}
+if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
+    continue;
+}
+```
+
