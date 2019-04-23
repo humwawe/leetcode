@@ -75,7 +75,7 @@ while (left < right && nums[right] == nums[right - 1]) right--;
 # 18. 4Sum
 排序后遍历计算前两个数的和，并用指针来指向后两个数
 >有个优化的点前两层循环固定某个数的情况下，若最大值或最小值有问题，便提前结束
-```java
+``` java
 // first loop
 if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) {
     break;
@@ -91,4 +91,11 @@ if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
     continue;
 }
 ```
+# 19. Remove Nth Node From End of List
+双指针先将一个移动`n`次，随后两个指针一起移动
 
+注意当第一个移动后为空，说明需要删除第一个节点
+# 20. Valid Parentheses
+栈，注意栈的状态
+# 21. Merge Two Sorted Lists
+声明一个`head`当作哨兵，最后返回`head.next`
