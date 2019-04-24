@@ -99,3 +99,11 @@ if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
 栈，注意栈的状态
 # 21. Merge Two Sorted Lists
 声明一个`head`当作哨兵，最后返回`head.next`
+# 22. Generate Parentheses
+左括号需要一直比右括号多即可以为正确
+
+对每个位置的可能性进行递归
+# 23. Merge k Sorted Lists
+依此遍历生成一个链表，再跟之后的合并
+
+可以按照分治的算法先分再合，效率更快
