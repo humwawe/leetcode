@@ -107,3 +107,5 @@ if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
 依此遍历生成一个链表，再跟之后的合并
 
 可以按照分治的算法先分再合，效率更快
+# 24. Swap Nodes in Pairs
+找个哨兵节点，接到`head`，再直接进行变换
