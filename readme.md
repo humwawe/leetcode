@@ -67,7 +67,7 @@ while (left < right && nums[left] == nums[left + 1]) left++;
 while (left < right && nums[right] == nums[right - 1]) right--;
 ```
 >优化的地方时考虑如果值相同，就继续移动，这样可以不用set判重复
-# 3Sum Closest
+# 16. 3Sum Closest
 排序、双指针。 
 >三个数加起来，太大就移动右指针，太小就移动左指针
 # 17. Letter Combinations of a Phone Number
@@ -108,7 +108,6 @@ if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
 
 可以按照分治的算法先分再合，效率更快
 # 24. Swap Nodes in Pairs
-<span id = "id24">
 找个哨兵节点，接到`head`，再直接进行变换
 # 25. Reverse Nodes in k-Group
-反转链表采用直接移动指向的方法，比题[24](#id24)的解法变换好理解
+反转链表采用直接移动指向的方法，比题[24](#24.-swap-nodes-in-pairs)的解法变换好理解
