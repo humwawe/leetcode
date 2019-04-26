@@ -110,4 +110,4 @@ if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
 # 24. Swap Nodes in Pairs
 找个哨兵节点，接到`head`，再直接进行变换
 # 25. Reverse Nodes in k-Group
-反转链表采用直接移动指向的方法，比题[24](#24.-swap-nodes-in-pairs)的解法变换好理解
+反转链表采用直接移动指向的方法，比题[24](#24-swap-nodes-in-pairs)的解法变换好理解
