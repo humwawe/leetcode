@@ -12,12 +12,11 @@ public class ReverseNodesInKGroup {
         ListNode prev = null;
         ListNode tmp = null;
         int count = 0;
-        boolean reverseFlag = false;
-        while (check != null && count++ < k) {
+        while (check != null && count < k) {
             check = check.next;
-            reverseFlag = true;
+            count++;
         }
-        if (reverseFlag) {
+        if (count == k) {
             count = 0;
             while (count < k) {
                 tmp = cur.next;
@@ -28,12 +27,11 @@ public class ReverseNodesInKGroup {
             }
             if (tmp != null) {
                 head.next = reverseKGroup(tmp, k);
-            } else {
-                return prev;
             }
+            return prev;
+
         }
         return head;
-
     }
 
 
