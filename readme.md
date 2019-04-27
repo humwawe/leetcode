@@ -111,3 +111,15 @@ if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
 找个哨兵节点，接到`head`，再直接进行变换
 # 25. Reverse Nodes in k-Group
 反转链表采用直接移动指向的方法，比题[24](#24-swap-nodes-in-pairs)的解法变换好理解
+# 26. Remove Duplicates from Sorted Array
+采用循环比较，若相等就移动整个后面的数组，比较耗时
+``` java
+int i = 0;
+for (int j = 1; j < nums.length; j++) {
+    if (nums[j] != nums[i]) {
+        i++;
+        nums[i] = nums[j];
+    }
+}
+```
+这种方法遍历一次，每次不相等就往前面放，用`i`记住该放的位置
