@@ -117,9 +117,17 @@ if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
 int i = 0;
 for (int j = 1; j < nums.length; j++) {
     if (nums[j] != nums[i]) {
-        i++;
-        nums[i] = nums[j];
+        nums[i++] = nums[j];
     }
 }
 ```
 这种方法遍历一次，每次不相等就往前面放，用`i`记住该放的位置
+# 27. Remove Element
+思路跟[26](#26-remove-duplicates-from-sorted-array)差不多，碰到不等于目标值，就往前面放
+# 28. Implement strStr()
+暴力遍历，一一比较，可以减去`needle`的长度降低循环次数
+> 有`KMP`算法效率价高
+# 29. Divide Two Integers
+由于只能用有符号31位表示，需要主要被除数或除数为最小负数的情况
+求负数采用异或值与`0`比较
+除以`2^n`，刚刚大于除数，结果加上`2^n`，被除数减去`2^n`个除数，继续下去
