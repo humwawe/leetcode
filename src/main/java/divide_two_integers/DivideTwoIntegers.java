@@ -4,7 +4,7 @@ package divide_two_integers;
  * @author hum
  */
 public class DivideTwoIntegers {
-    public static int divide(int dividend, int divisor) {
+    public int divide(int dividend, int divisor) {
         if (dividend == Integer.MIN_VALUE && divisor == -1) {
             return Integer.MAX_VALUE;
         }
@@ -39,8 +39,4 @@ public class DivideTwoIntegers {
         return flag ? -result : result;
     }
 
-    public static void main(String[] args) {
-        System.out.println(divide(-2147483648, -2147483648));
-        System.out.println(divide(-2147483648, -1));
-    }
 }

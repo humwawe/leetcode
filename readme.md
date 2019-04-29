@@ -131,3 +131,10 @@ for (int j = 1; j < nums.length; j++) {
 由于只能用有符号31位表示，需要主要被除数或除数为最小负数的情况
 求负数采用异或值与`0`比较
 除以`2^n`，刚刚大于除数，结果加上`2^n`，被除数减去`2^n`个除数，继续下去
+# 30. Substring with Concatenation of All Words
+开始用了list和map的递归都超时了，把map的递归改成循环通过
+> 从list构建map的方法可以用java8的stream
+``` java
+Map<String, Integer> collect = list.stream().map(word -> new AbstractMap.SimpleEntry<>(word, 1)).collect(toMap(AbstractMap.SimpleEntry::getKey, AbstractMap.SimpleEntry::getValue, (v1, v2) -> v1 + v2));
+Map<Object, Long> collect1 = list.stream().map(word -> new AbstractMap.SimpleEntry<>(word, 1)).collect(groupingBy(AbstractMap.SimpleEntry::getKey, counting()));
+```
