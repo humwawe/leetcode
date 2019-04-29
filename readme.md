@@ -138,3 +138,8 @@ for (int j = 1; j < nums.length; j++) {
 Map<String, Integer> collect = list.stream().map(word -> new AbstractMap.SimpleEntry<>(word, 1)).collect(toMap(AbstractMap.SimpleEntry::getKey, AbstractMap.SimpleEntry::getValue, (v1, v2) -> v1 + v2));
 Map<Object, Long> collect1 = list.stream().map(word -> new AbstractMap.SimpleEntry<>(word, 1)).collect(groupingBy(AbstractMap.SimpleEntry::getKey, counting()));
 ```
+# 31. Next Permutation
+1. 从数组倒着查找，找到第一个`nums[i]`比`nums[i+1]`小的`i`
+2. 再从`nums[i+1]`到`nums[nums.length-1]`当中找到刚好大于`nums[i]`的元素，然后交换
+3. 再将`i+1`后面的元素反转
+这种方法编程时可以直接包含其他特殊情况
