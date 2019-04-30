@@ -143,3 +143,19 @@ Map<Object, Long> collect1 = list.stream().map(word -> new AbstractMap.SimpleEnt
 2. 再从`nums[i+1]`到`nums[nums.length-1]`当中找到刚好大于`nums[i]`的元素，然后交换
 3. 再将`i+1`后面的元素反转
 这种方法编程时可以直接包含其他特殊情况
+# 32. Longest Valid Parentheses
+当count==0的时候更新结果，可能导致无法更新，如"(()",因此按反方向再扫描一次
+
+可以使用栈来操作，注意加入栈的是下标，当遇到")"便与栈顶相减，表示可能的结果
+``` java
+if (s.charAt(i) == '(') {
+    stack.push(i);
+} else {
+    if (stack.empty()) {
+        start = i + 1;
+    } else {
+        stack.pop();
+        result = stack.empty() ? Math.max(result, i - start + 1) : Math.max(result, i - stack.peek());
+    }
+}
+```
