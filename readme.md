@@ -126,14 +126,14 @@ for (int j = 1; j < nums.length; j++) {
 思路跟[26](#26-remove-duplicates-from-sorted-array)差不多，碰到不等于目标值，就往前面放
 # 28. Implement strStr()
 暴力遍历，一一比较，可以减去`needle`的长度降低循环次数
-> 有`KMP`算法效率价高
+> 有`KMP`算法效率较高
 # 29. Divide Two Integers
 由于只能用有符号31位表示，需要主要被除数或除数为最小负数的情况
 求负数采用异或值与`0`比较
 除以`2^n`，刚刚大于除数，结果加上`2^n`，被除数减去`2^n`个除数，继续下去
 # 30. Substring with Concatenation of All Words
-开始用了list和map的递归都超时了，把map的递归改成循环通过
-> 从list构建map的方法可以用java8的stream
+开始用了`list`和`map`的递归都超时了，把`map`的递归改成循环通过
+> 从`list`构建`map`的方法可以用`java8`的`stream`
 ``` java
 Map<String, Integer> collect = list.stream().map(word -> new AbstractMap.SimpleEntry<>(word, 1)).collect(toMap(AbstractMap.SimpleEntry::getKey, AbstractMap.SimpleEntry::getValue, (v1, v2) -> v1 + v2));
 Map<Object, Long> collect1 = list.stream().map(word -> new AbstractMap.SimpleEntry<>(word, 1)).collect(groupingBy(AbstractMap.SimpleEntry::getKey, counting()));
@@ -144,9 +144,9 @@ Map<Object, Long> collect1 = list.stream().map(word -> new AbstractMap.SimpleEnt
 3. 再将`i+1`后面的元素反转
 这种方法编程时可以直接包含其他特殊情况
 # 32. Longest Valid Parentheses
-当count==0的时候更新结果，可能导致无法更新，如"(()",因此按反方向再扫描一次
+当`count==0`的时候更新结果，可能导致无法更新，如`"(()"`，因此按反方向再扫描一次
 
-可以使用栈来操作，注意加入栈的是下标，当遇到")"便与栈顶相减，表示可能的结果
+可以使用栈来操作，注意加入栈的是下标，当遇到`")"`便与栈顶相减，表示可能的结果
 ``` java
 if (s.charAt(i) == '(') {
     stack.push(i);
@@ -159,3 +159,5 @@ if (s.charAt(i) == '(') {
     }
 }
 ```
+# 33. Search in Rotated Sorted Array
+二分后有一边仍然是有序的，在有序中找出必然在有序这边的情况，否则肯定在另一边
