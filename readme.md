@@ -161,3 +161,5 @@ if (s.charAt(i) == '(') {
 ```
 # 33. Search in Rotated Sorted Array
 二分后有一边仍然是有序的，在有序中找出必然在有序这边的情况，否则肯定在另一边
+# 34. Find First and Last Position of Element in Sorted Array
+二分查找目标，再在两边分别二分查找边界，注意循环的退出条件
