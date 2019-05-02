@@ -163,3 +163,21 @@ if (s.charAt(i) == '(') {
 二分后有一边仍然是有序的，在有序中找出必然在有序这边的情况，否则肯定在另一边
 # 34. Find First and Last Position of Element in Sorted Array
 二分查找目标，再在两边分别二分查找边界，注意循环的退出条件
+# 35. Search Insert Position
+二分查找，找到便返回位置，找到最后没找到返回`left`的位置即可
+# 36. Valid Sudoku
+开三个二维空间，遍历一次，若某次的元素已经被使用，返回false
+
+也可以开三个一维空间，用一个数字的每位来表示遇到的数字
+``` java
+int flag = 0x1 << (board[i][j] - '0');
+if (flag == (row[i] & flag) || flag == (column[j] & flag) || (flag == (square[box] & flag))) {
+    return false;
+}
+row[i] |= flag;
+column[i] |= flag;
+square[i] |= flag;
+```
+`char`转成`int`可以
+* `-'0'`
+* `Character.getNumericValue()`
