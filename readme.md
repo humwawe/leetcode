@@ -181,3 +181,6 @@ square[i] |= flag;
 `char`转成`int`可以
 * `-'0'`
 * `Character.getNumericValue()`
+# 37. Sudoku Solver
+利用棋盘初始化`row`，`column`，`square`，达到剪枝目的，并记录为`.`的位置信息`index`（用两位数字表示）
+对所有位置循环`1-9`，填入应该的值，递归求解
