@@ -192,3 +192,7 @@ square[i] |= flag;
 # 37. Sudoku Solver
 利用棋盘初始化`row`，`column`，`square`，达到剪枝目的，并记录为`.`的位置信息`index`（用两位数字表示）
 对所有位置循环`1-9`，填入应该的值，递归求解
+# 38. Count and Say
+递归得到下一个值，
+
+`StringBuilder`可以直接`append`数字，不用转换成`String`
