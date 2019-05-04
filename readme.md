@@ -196,3 +196,9 @@ square[i] |= flag;
 递归得到下一个值，
 
 `StringBuilder`可以直接`append`数字，不用转换成`String`
+# 39. Combination Sum
+递归到`target`为`0`即加入一个解，递归设计必须有返回值
+
+排序后，判断当前`candidates[i]`大于`target`可以退出循环
+
+记录`level`，当第一个值用完了，开始用第二个则不再往前考虑
