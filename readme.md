@@ -202,3 +202,10 @@ square[i] |= flag;
 排序后，判断当前`candidates[i]`大于`target`可以退出循环
 
 记录`level`，当第一个值用完了，开始用第二个则不再往前考虑
+# 40. Combination Sum II
+不重复，所以若后一个数跟前一个相等则不再考虑，这种方法也需要排序
+``` java
+if (i != level && candidates[i] == candidates[i - 1]) {
+    continue;
+}
+```
