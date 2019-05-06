@@ -209,3 +209,5 @@ if (i != level && candidates[i] == candidates[i - 1]) {
     continue;
 }
 ```
+# 41. First Missing Positive
+想象一个大的`hashtable`，当前数组只是前面的一段，因此把在这个数组里的值的放到合适位置，再便利一边看找第一个不在合适位置的`index`
