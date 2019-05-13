@@ -263,3 +263,27 @@ key = new String(arr);
 >即`-1 >> 1`位仍然是`-1`，而`-1 / 2`结果为`0`，因此用移位操作需要将负数转化为正数避免死循环，同时还要考虑`Integer.MIN_VALUE`无法转换为正数
 
 >而如果用除`2`操作，可以不用变为0来处理，只需最后的时候求个倒数
+# 51. N-Queens
+递归记录哪些可以访问即可
+
+用数字来表示状态（初始，访问，因访问不能被访问）
+>由于不能被访问可能由多种位置的皇后导致，再回状态的时候每种操作只能回一次
+# 52. N-Queens II
+可以采用位运算来记录可以访问的位置
+``` java
+private void dfs(int n, int row, int col, int pie, int na) {
+    if (row >= n) {
+        count++;
+        return;
+    }
+    //该行可以放的位置
+    int bits = (~(col | pie | na)) & ((1 << n) - 1);
+    while (bits > 0) {
+        // 取低位的1
+        int emp = bits & -bits;
+        dfs(n, row + 1, col | emp, (pie | emp) << 1, (na | emp) >> 1);
+        // 去掉最后一个1
+        bits &= bits - 1;
+    }
+}
+```
