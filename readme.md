@@ -287,3 +287,12 @@ private void dfs(int n, int row, int col, int pie, int na) {
     }
 }
 ```
+# 53. Maximum Subarray
+一次循环，`max`记录出现的最大值，`tmp`为当前选i的情况，`i`之前为正就选`i`，之前为负，就从`i`开始
+``` java
+nums[i] = nums[i] + max(nums[i-1], 0)
+```
+# 54. Spiral Matrix
+左下右上的走，若走完某次已经到达个数就结束
+# 55. Jump Game
+在第一步中找到能跳的最大位置，再在这些位置找能跳的最大位置，若有能超过总长度的即为可以跳过
