@@ -312,3 +312,20 @@ result.toArray(new int[0][])
 > 比较麻烦的是二分查找找到和没找到时，确定位置
 # 58. Length of Last Word
 一个单词加个空格，该单词也算最后一个，因此`trim`后再从后前知道找到空格
+# 59. Spiral Matrix II
+一圈一圈的填，因为正方形，算出圈数赋值即可
+# 60. Permutation Sequence
+递归找到便返回
+
+可以考虑直接求出第`k`位的值
+``` java
+pos = k / total;
+k = k % total;
+result.append(input.get(pos));
+input.remove(pos);
+total = total / (n - 1);
+n = n - 1;
+```
+从高到低计算每一位后面有多少个，跟`k`比较，求出该位置的值
+61. Rotate List
+求出总长度，两个指针一个先走`k`次，再一起走直到某个到末尾，再将后`k`个以到前面
