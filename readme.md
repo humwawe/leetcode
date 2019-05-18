@@ -409,3 +409,7 @@ switch (nums[i]){
 # 77. Combinations
 递归
 > 循环里可以不用到n，到n-(k-level)即可，可以少点计算
+# 78. Subsets
+递归每个遇到的值
+# 79. Word Search
+注意剪枝的情况，如果某一步为`true`后，就没必要继续往其他方向走了
