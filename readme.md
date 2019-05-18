@@ -381,4 +381,31 @@ result[i + 1][j + 1] = Math.min(Math.min(result[i][j + 1], result[i + 1][j]), re
 题中第一个数大于上一行最后一个数
 * 可以采用先找到列的位置，再在列中查找
 * 可以把二维数组转成一位数组的形式二分
+# 75. Sort Colors
+使用快排的思路，维护左边（为`0`）和右边（为`2`）和中间（为`1`），遍历数组根据值看是跟前面交换还是跟后面交换
 
+另外可以存下每个颜色出现的次数，再更改数组，不过遍历了两次
+
+可以用三指针，记录每个指针应该的位置，然后看是否覆盖
+``` java
+switch (nums[i]){
+    case 0:
+        nums[bluePosition++] = 2;
+        nums[whitePosition++] = 1;
+        nums[redPosition++] = 0;
+        break;
+    case 1:
+        nums[bluePosition++] = 2;
+        nums[whitePosition++] = 1;
+        break;
+    case 2:
+        nums[bluePosition++] = 2;
+        break;
+}
+```
+# 76. Minimum Window Substring
+滑动窗口
+> 滑动右窗口找到满足条件的子串后，滑动左窗口直到不满足条件，继续滑动右窗口重复过程
+# 77. Combinations
+递归
+> 循环里可以不用到n，到n-(k-level)即可，可以少点计算
