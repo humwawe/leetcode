@@ -373,3 +373,12 @@ result[i + 1][j + 1] = result[i][j];
 
 result[i + 1][j + 1] = Math.min(Math.min(result[i][j + 1], result[i + 1][j]), result[i][j]) + 1;
 ```
+# 73. Set Matrix Zeroes
+用`set`记录行和列要位`0`的位置
+
+可以用常数空间记录第一行和第一列是否为`0`，然后用第一行和第一列来记录该行和该列是否为`0`
+# 74. Search a 2D Matrix
+题中第一个数大于上一行最后一个数
+* 可以采用先找到列的位置，再在列中查找
+* 可以把二维数组转成一位数组的形式二分
+
