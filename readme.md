@@ -352,3 +352,24 @@ if (j > 0) {
 记录能放几个单词，总共多少空格，有多少个位置，平均放就是商，余数每加一个加到左边的位置
 
 最后一行要挨着放，也要考虑什么时候到了最后一行
+# 69. Sqrt(x)
+`int`里开根号最大的数值是`46340`，这样`mid`相乘也不会溢出（也可以用`x/mid>mid`来保证不溢出）
+
+从`0`到`46340`二分，退出时返回`right`值
+> 可以用[牛顿迭代法](https://www.guokr.com/question/461510/)求出
+# 70. Climbing Stairs
+动态规划
+``` java
+dp[n] = dp[n - 1] + dp[n - 2]
+```
+# 71. Simplify Path
+用一个字符串来保留信息，若是`..`则找到最后一个`/`，删除后面的
+
+可以用栈来保存，看到`..`弹出即可
+# 72. Edit Distance
+动态规划
+``` java
+result[i + 1][j + 1] = result[i][j];
+
+result[i + 1][j + 1] = Math.min(Math.min(result[i][j + 1], result[i + 1][j]), result[i][j]) + 1;
+```
