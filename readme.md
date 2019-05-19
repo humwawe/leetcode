@@ -452,3 +452,16 @@ head.next = deleteDuplicates(head.next);
 if(head.next != null && head.val == head.next.val) head = head.next.next;
 else if(flag) head=head.next;
 ```
+另一种思路递归，先把前面的处理掉：存在`nex`的移动就不要`head`
+``` java
+ListNode nex = head.next;
+while(nex != null && head.val == nex.val){
+    nex = nex.next;
+}
+if(head.next == nex){
+    head.next = deleteDuplicates(head.next);
+}else{
+   head = deleteDuplicates(nex); 
+} 
+```
+>把递归理解为已经处理的结果，再在本级中运用，可以方便的处理各种问题
