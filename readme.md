@@ -125,7 +125,7 @@ if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target) {
 int i = 0;
 for (int j = 1; j < nums.length; j++) {
     if (nums[j] != nums[i]) {
-        nums[i++] = nums[j];
+        nums[++i] = nums[j];
     }
 }
 ```
@@ -334,7 +334,7 @@ n = n - 1;
 
 另外可以考虑成一个组合问题，从总共的步数`m+n-2`中挑出`m-1`布向下的
 # 63. Unique Paths II
-跟[62](#62-unique-paths)差不多，跟出现1的地方返回`0`即可
+跟[62](#62.-unique-paths)差不多，跟出现1的地方返回`0`即可
 ``` java
 if (j > 0) {
     dp[j] += dp[j - 1];
@@ -413,3 +413,42 @@ switch (nums[i]){
 递归每个遇到的值
 # 79. Word Search
 注意剪枝的情况，如果某一步为`true`后，就没必要继续往其他方向走了
+# 80. Remove Duplicates from Sorted Array II
+在小于2的时候可以往前走，若是相等且大于等于2了，则j往后走
+
+也可以直接让j与i位置的前第2个元素比较
+``` java
+for (int n : nums) {
+if (i < 2 || n != nums[i - 2]) {
+    nums[i++] = n;
+    }
+}
+```
+# 81. Search in Rotated Sorted Array II
+跟[33](#33.-search-in-rotated-sorted-array)思路类似，即二分后某一边仍然有序
+看这一边是否包含决定二分的方向
+
+此题可以右重复元素，因此当`left=mid`的时候（已知`mid`不等于`target`），将`left`往后移动即可
+# 82. Remove Duplicates from Sorted List II
+如果前一个和后一个不等则把前一个加到`dummy`后，如果相等则遍历到不等的时候，记录不等的那个地方
+# 83. Remove Duplicates from Sorted List
+跟[82](#82.-remove-duplicates-from-sorted-list-ii)差不多只是遍历到不相等后，记录前一个位置
+
+考虑递归的方法，如果后面已经去重完毕，把head的next指向它，并只需考虑head和head.next是否相等
+``` java
+head.next = deleteDuplicates(head.next);
+if(head.val == head.next.val) head = head.next;
+```
+但是，82可如果变为
+``` java
+head.next = deleteDuplicates(head.next);
+if(head.next!=null && head.val == head.next.val) head = head.next.next;
+```
+会有问题，因为`deleteDuplicates(head.next)`后的元素，不只在与`head`相等的时候去掉`head`，比如`1,1,1,2`，`deleteDuplicates(head.next)`作用在`1,1,2`后变为`2`，而`head`为`1`，此时`1,2`保留了，因此这种情况下还要记录是否删掉`head`
+``` java
+boolean flag=false;
+if(head.val == head.next.val) flag = true;
+head.next = deleteDuplicates(head.next);
+if(head.next != null && head.val == head.next.val) head = head.next.next;
+else if(flag) head=head.next;
+```
