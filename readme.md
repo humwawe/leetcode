@@ -334,7 +334,7 @@ n = n - 1;
 
 另外可以考虑成一个组合问题，从总共的步数`m+n-2`中挑出`m-1`布向下的
 # 63. Unique Paths II
-跟[62](#62.-unique-paths)差不多，跟出现1的地方返回`0`即可
+跟[62](#62-unique-paths)差不多，跟出现1的地方返回`0`即可
 ``` java
 if (j > 0) {
     dp[j] += dp[j - 1];
@@ -425,14 +425,14 @@ if (i < 2 || n != nums[i - 2]) {
 }
 ```
 # 81. Search in Rotated Sorted Array II
-跟[33](#33.-search-in-rotated-sorted-array)思路类似，即二分后某一边仍然有序
+跟[33](#33-search-in-rotated-sorted-array)思路类似，即二分后某一边仍然有序
 看这一边是否包含决定二分的方向
 
 此题可以右重复元素，因此当`left=mid`的时候（已知`mid`不等于`target`），将`left`往后移动即可
 # 82. Remove Duplicates from Sorted List II
 如果前一个和后一个不等则把前一个加到`dummy`后，如果相等则遍历到不等的时候，记录不等的那个地方
 # 83. Remove Duplicates from Sorted List
-跟[82](#82.-remove-duplicates-from-sorted-list-ii)差不多只是遍历到不相等后，记录前一个位置
+跟[82](#82-remove-duplicates-from-sorted-list-ii)差不多只是遍历到不相等后，记录前一个位置
 
 考虑递归的方法，如果后面已经去重完毕，把head的next指向它，并只需考虑head和head.next是否相等
 ``` java
@@ -458,9 +458,9 @@ ListNode nex = head.next;
 while(nex != null && head.val == nex.val){
     nex = nex.next;
 }
-if(head.next == nex){
+if (head.next == nex) {
     head.next = deleteDuplicates(head.next);
-}else{
+} else {
    head = deleteDuplicates(nex); 
 } 
 ```
@@ -474,7 +474,7 @@ if(head.next == nex){
 # 85. Maximal Rectangle
 对1的位置求当前行矩形面积（1的延展长度），在此范围内求下一行延展的最长长度，若此长度变小，在更新范围继续下一行
 
-另一个方法可以想象成[84](#84.-largest-rectangle-in-histogram)题，对每一行列举求得当前和的各个高度，然后求最大面积
+另一个方法可以想象成[84](#84-largest-rectangle-in-histogram)题，对每一行列举求得当前和的各个高度，然后求最大面积
 ``` java
 for (int i = 0; i < row; i++) {
     for (int j = 0; j < col; j++) {

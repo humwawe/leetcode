@@ -27,8 +27,6 @@ public class MaximalRectangle {
                         lastJ = tmpJ;
                         tmpI++;
                     }
-
-
                 }
             }
         }
