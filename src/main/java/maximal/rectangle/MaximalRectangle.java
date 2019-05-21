@@ -1,6 +1,5 @@
 package maximal.rectangle;
 
-import largest.rectangle.in.histogram.LargestRectangleInHistogram;
 
 /**
  * @author hum

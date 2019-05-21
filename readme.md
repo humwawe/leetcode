@@ -483,3 +483,18 @@ for (int i = 0; i < row; i++) {
     result = Math.max(result, largestRectangleArea(heights));
 }
 ```
+# 86. Partition List
+递归的思路，假设之后的节点都已经排好了，考虑第一个节点的情况即可
+
+另外可以用两个指针记录大于等于`x`的，和小于`x`的，最后在合起来
+
+# 87. Scramble String
+递归，对每个位置考虑
+1. `s1`的`left`和`s2`的`left`与上`s1`的`right`和`s2`的`right`
+2. `s1`的`left`和`s2`的`right`与上`s1`的`right`和`s2`的`left`
+# 88. Merge Sorted Array
+从后往前填大的数字
+# 89. Gray Code
+考虑求出了`grayCode(n-1)`，下一步就是对该结果逆序并在第一位加上`1`
+
+>雷编码的生成过程：`G(i) = i ^ (i/2)`
