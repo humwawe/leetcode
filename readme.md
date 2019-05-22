@@ -501,3 +501,11 @@ for (int i = 0; i < row; i++) {
 # 90. Subsets II
 递归，如果该位置用过就继续
 注意如果给`lastUsed`赋值为其他的整数，比如最小的整数，当`nums`里面存在最小整数就有问题，因此包装为`Integer`赋值为`null`
+# 91. Decode Ways
+动态规划，注意边界和`0`的情况
+# 92. Reverse Linked List II
+找到各个位置，反转即可，反转思路与[25](#25-reverse-nodes-in-k-group)差不多
+# 93. Restore IP Addresses
+递归`1-3`个字符串，用完且字符串为空就加入`result`
+# 94. Binary Tree Inorder Traversal
+主要是非递归的实现
