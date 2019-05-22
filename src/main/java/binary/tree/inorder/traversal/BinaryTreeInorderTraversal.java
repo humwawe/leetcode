@@ -36,4 +36,39 @@ public class BinaryTreeInorderTraversal {
         }
         return result;
     }
+
+    public List<Integer> inorderTraversal3(TreeNode root) {
+        if (root == null) {
+            return result;
+        }
+        Stack<Command> stack = new Stack<>();
+        stack.push(new Command("visit", root));
+        while (!stack.isEmpty()) {
+            Command command = stack.pop();
+
+            if (command.command.equals("print")) {
+                result.add(command.node.val);
+            } else {
+                if (command.node.right != null) {
+                    stack.push(new Command("visit", command.node.right));
+                }
+                stack.push(new Command("print", command.node));
+                if (command.node.left != null) {
+                    stack.push(new Command("visit", command.node.left));
+                }
+            }
+        }
+        return result;
+    }
+
+    class Command {
+        String command;
+        TreeNode node;
+
+        public Command(String command, TreeNode node) {
+            this.command = command;
+            this.node = node;
+        }
+
+    }
 }

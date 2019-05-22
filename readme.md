@@ -509,3 +509,5 @@ for (int i = 0; i < row; i++) {
 递归`1-3`个字符串，用完且字符串为空就加入`result`
 # 94. Binary Tree Inorder Traversal
 主要是非递归的实现
+
+可以构造一个`Command`来模拟递归的执行过程
