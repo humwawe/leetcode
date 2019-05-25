@@ -513,3 +513,29 @@ for (int i = 0; i < row; i++) {
 主要是非递归的实现
 
 可以构造一个`Command`来模拟递归的执行过程
+# 95. Unique Binary Search Trees II
+考虑如果已经构成了一个一个列表，多一个数字如何构建下一个列表
+
+对每一个进行遍历，
+* 添加`head`为`n`的右孩子
+* 添加`head`的右孩子，把右孩子接到左边
+* 添加`head`的右孩子的右孩子，把右孩子的右孩子接到左边
+* ...
+
+另外的思路是：每个数字都能做为head，head左边k个元素和右边n-k个元素独立
+![](http://latex.codecogs.com/gif.latex?f(n)=\sum_{k=1}^nf(k-1)*SP(n-k))
+>此即为卡特兰数
+``` java
+for (int i = 1; i <= n; i++) {
+    List<TreeNode> leftSubTrees = generate(1, i - 1);
+    List<TreeNode> rightSubTrees = generate(i + 1, n);
+    for (TreeNode left : leftSubTrees) {
+        for (TreeNode right : rightSubTrees) {
+            TreeNode node = new TreeNode(i);
+            node.left = left;
+            node.right = right;
+            res.add(node);
+        }
+    }
+}
+```
