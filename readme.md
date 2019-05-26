@@ -543,3 +543,39 @@ for (int i = 1; i <= n; i++) {
 使用卡特兰数的公式
 # 97. Interleaving String
 普通递归超时，可以采用记忆化递归或是动态规划
+# 98. Validate Binary Search Tree
+递归，考虑`root`值小于左边最小值，大于右边最大值，最小值最大值可以记录在函数中
+``` java
+boolean helper(TreeNode node, Integer lower, Integer upper) {
+    if (node == null) return true;
+
+    int val = node.val;
+    if (lower != null && val <= lower) return false;
+    if (upper != null && val >= upper) return false;
+
+    if (! helper(node.right, val, upper)) return false;
+    if (! helper(node.left, lower, val)) return false;
+    return true;
+}
+```
+
+也可以直接中序遍历，看每次遍历到的数是否大于前一个数字
+# 99. Recover Binary Search Tree
+中序遍历记录第一个有问题的地方，直接与最小值进行交换
+
+或者遍历途中记录第一个位置和最后一个位置
+``` java
+for (int i = 0; i < list.size() - 1; i++) {
+    if (list.get(i).val > list.get(i + 1).val) {
+        if (first == -1) {
+            first = i;
+            last = i + 1;
+        } else {
+            last = i + 1;
+            break;
+        }
+    }
+}
+```
+# 100. Same Tree
+递归比较即可
