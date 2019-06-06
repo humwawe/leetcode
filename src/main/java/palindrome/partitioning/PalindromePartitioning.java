@@ -1,7 +1,6 @@
 package palindrome.partitioning;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**

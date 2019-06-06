@@ -1,6 +1,6 @@
 package populating.next.right.pointers.in.each.node;
 
-import common.Node;
+import common.NextNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -9,16 +9,16 @@ import java.util.Queue;
  * @author hum
  */
 public class PopulatingNextRightPointersInEachNode {
-    public Node connect(Node root) {
+    public NextNode connect(NextNode root) {
         if (root == null) {
             return null;
         }
-        Queue<Node> queue = new ArrayDeque<>();
+        Queue<NextNode> queue = new ArrayDeque<>();
         queue.add(root);
         while (!queue.isEmpty()) {
             int size = queue.size();
             while (size-- > 0) {
-                Node head = queue.poll();
+                NextNode head = queue.poll();
                 if (head.left != null) {
                     queue.add(head.left);
                 }
