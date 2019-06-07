@@ -1,7 +1,5 @@
 package candy;
 
-import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * @author hum
