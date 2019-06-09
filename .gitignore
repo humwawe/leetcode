@@ -3,3 +3,4 @@
 *iml
 target
 src/test
+/src/main/java/competition/*
