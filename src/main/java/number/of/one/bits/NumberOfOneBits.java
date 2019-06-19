@@ -1,9 +1,5 @@
 package number.of.one.bits;
 
-import java.nio.LongBuffer;
-import java.util.Arrays;
-import java.util.BitSet;
-
 /**
  * @author hum
  */
@@ -16,7 +12,6 @@ public class NumberOfOneBits {
                 result++;
             }
         }
-
         return result;
     }
 }
