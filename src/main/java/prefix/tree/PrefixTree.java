@@ -5,11 +5,11 @@ package prefix.tree;
  */
 class TrieNode {
     TrieNode[] child;
-    boolean is_end;
+    boolean isEnd;
 
     public TrieNode() {
         child = new TrieNode[26];
-        is_end = false;
+        isEnd = false;
     }
 }
 
@@ -28,7 +28,7 @@ public class PrefixTree {
             }
             ptr = ptr.child[c - 'a'];
         }
-        ptr.is_end = true;
+        ptr.isEnd = true;
     }
 
 
@@ -40,7 +40,7 @@ public class PrefixTree {
             }
             ptr = ptr.child[c - 'a'];
         }
-        return ptr.is_end;
+        return ptr.isEnd;
     }
 
     public boolean startsWith(String prefix) {
