@@ -8,7 +8,7 @@ public class ValidAnagram {
         if (s.length() != t.length()) {
             return false;
         }
-        char[] table = new char[26];
+        int[] table = new int[26];
         for (int i = 0; i < s.length(); i++) {
             table[s.charAt(i) - 'a']++;
         }
