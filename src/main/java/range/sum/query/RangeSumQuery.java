@@ -5,7 +5,7 @@ package range.sum.query;
  */
 public class RangeSumQuery {
 
-    int[] sum;
+    private int[] sum;
 
     public RangeSumQuery(int[] nums) {
         int len = nums.length;
