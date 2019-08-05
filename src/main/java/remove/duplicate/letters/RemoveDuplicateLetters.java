@@ -1,10 +1,7 @@
 package remove.duplicate.letters;
 
-import isomorphic.strings.IsomorphicStrings;
 
 import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 /**
  * @author hum
