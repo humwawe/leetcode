@@ -26,24 +26,16 @@ public class PerfectRectangle {
             String lb = rectangle[0] + " " + rectangle[1];
             String rt = rectangle[2] + " " + rectangle[3];
             String rb = rectangle[2] + " " + rectangle[1];
-            if (!set.contains(lt)) {
-                set.add(lt);
-            } else {
+            if (!set.add(lt)) {
                 set.remove(lt);
             }
-            if (!set.contains(lb)) {
-                set.add(lb);
-            } else {
+            if (!set.add(lb)) {
                 set.remove(lb);
             }
-            if (!set.contains(rt)) {
-                set.add(rt);
-            } else {
+            if (!set.add(rt)) {
                 set.remove(rt);
             }
-            if (!set.contains(rb)) {
-                set.add(rb);
-            } else {
+            if (!set.add(rb)) {
                 set.remove(rb);
             }
         }
