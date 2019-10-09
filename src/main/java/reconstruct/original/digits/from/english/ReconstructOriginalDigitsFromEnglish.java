@@ -1,8 +1,5 @@
 package reconstruct.original.digits.from.english;
 
-import java.sql.ResultSet;
-import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * @author hum
