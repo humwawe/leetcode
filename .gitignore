@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
 *iml
-target
+target/*
+!target/sum
 src/test
 /src/main/java/competition/*
