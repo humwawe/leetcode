@@ -1,6 +1,5 @@
 package friend.circles;
 
-import java.util.Arrays;
 
 /**
  * @author hum
