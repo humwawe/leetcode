@@ -1,15 +1,15 @@
-package min.stack;
+package minimum.stack;
 
 import java.util.Stack;
 
 /**
  * @author hum
  */
-public class MinStack {
+public class MinimumStack {
     Stack<Integer> stack;
     Stack<Integer> minStack;
 
-    public MinStack() {
+    public MinimumStack() {
         stack = new Stack<>();
         minStack = new Stack<>();
     }
