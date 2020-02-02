@@ -4,4 +4,4 @@
 target/*
 !target/sum
 src/test
-/src/main/java/competition/*
+src/main/java/competition/*

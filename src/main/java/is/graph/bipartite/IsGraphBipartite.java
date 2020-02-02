@@ -18,7 +18,7 @@ public class IsGraphBipartite {
                 while (!queue.isEmpty()) {
                     Integer poll = queue.poll();
                     int color = vis[poll];
-                    for (int j : graph[i]) {
+                    for (int j : graph[poll]) {
                         if (vis[j] == color) {
                             return false;
                         }
