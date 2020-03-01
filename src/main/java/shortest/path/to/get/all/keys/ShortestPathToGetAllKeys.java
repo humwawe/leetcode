@@ -26,6 +26,7 @@ public class ShortestPathToGetAllKeys {
             }
         }
 
+        System.out.println(target);
         int result = 0;
         while (!queue.isEmpty()) {
             result++;
@@ -43,10 +44,10 @@ public class ShortestPathToGetAllKeys {
                         continue;
                     }
                     char c = grid[newX].charAt(newY);
-                    if (c >= 'A' && c < 'F' && (newState & (1 << c - 'A')) == 0) {
+                    if (c >= 'A' && c <= 'F' && (newState & (1 << c - 'A')) == 0) {
                         continue;
                     }
-                    if (c >= 'a' && c >= 'f') {
+                    if (c >= 'a' && c <= 'f') {
                         newState |= (1 << (c - 'a'));
                     }
                     if (newState == target) {
