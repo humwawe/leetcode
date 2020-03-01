@@ -1,4 +1,4 @@
-package shortest.path.bisiting.all.nodes;
+package shortest.path.visiting.all.nodes;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
