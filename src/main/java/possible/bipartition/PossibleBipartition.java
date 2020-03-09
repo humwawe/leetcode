@@ -1,10 +1,7 @@
 package possible.bipartition;
 
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author hum
@@ -43,4 +40,42 @@ public class PossibleBipartition {
         }
         return true;
     }
+
+    int[] h = new int[2005];
+    int[] ne = new int[10005];
+    int[] e = new int[10005];
+
+    public boolean possibleBipartition2(int n, int[][] dislikes) {
+        Arrays.fill(h, -1);
+        int m = 0;
+        for (int[] dislike : dislikes) {
+            e[m] = dislike[1];
+            ne[m] = h[dislike[0]];
+            h[dislike[0]] = m++;
+            e[m] = dislike[0];
+            ne[m] = h[dislike[1]];
+            h[dislike[1]] = m++;
+        }
+        int[] colors = new int[n + 1];
+        for (int i = 1; i <= n; i++) {
+            if (colors[i] == 0 && !dfs(colors, i, 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean dfs(int[] colors, int i, int color) {
+        if (colors[i] != 0) {
+            return colors[i] == color;
+        }
+        colors[i] = color;
+        for (int j = h[i]; j != -1; j = ne[j]) {
+            if (!dfs(colors, e[j], -color)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

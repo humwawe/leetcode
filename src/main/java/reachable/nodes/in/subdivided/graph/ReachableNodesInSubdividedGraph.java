@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  */
 public class ReachableNodesInSubdividedGraph {
     public int reachableNodes(int[][] edges, int m, int n) {
-        Map<Integer, Map<Integer, Integer>> graph = new HashMap();
+        Map<Integer, Map<Integer, Integer>> graph = new HashMap<>();
         for (int[] edge : edges) {
             int u = edge[0], v = edge[1], w = edge[2];
             graph.computeIfAbsent(u, x -> new HashMap<>()).put(v, w);
