@@ -17,7 +17,7 @@ public class MakeArrayStrictlyIncreasing {
         for (int i = 0; i <= len; i++) {
             Arrays.fill(dp[i], 0x3f3f3f3f);
         }
-        dp[0][0] = -0x3f3f3f3f;
+        Arrays.fill(dp[0], -0x3f3f3f3f);
         for (int i = 1; i <= len; i++) {
             for (int j = 0; j <= i; j++) {
                 if (dp[i - 1][j] < arr1[i - 1]) {
