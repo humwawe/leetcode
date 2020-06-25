@@ -39,14 +39,12 @@ public class NumberOfWaysToWearDifferentHatsToEachOther {
         }
         int res = helper(h, i + 1, state);
         List<Integer> list = h.get(i);
-        if (!list.isEmpty()) {
-            for (Integer integer : list) {
-                if ((state >> integer & 1) == 1) {
-                    continue;
-                }
-                res += helper(h, i + 1, state | 1 << integer);
-                res %= mod;
+        for (Integer integer : list) {
+            if ((state >> integer & 1) == 1) {
+                continue;
             }
+            res += helper(h, i + 1, state | 1 << integer);
+            res %= mod;
         }
         return memo[i][state] = res % mod;
     }
