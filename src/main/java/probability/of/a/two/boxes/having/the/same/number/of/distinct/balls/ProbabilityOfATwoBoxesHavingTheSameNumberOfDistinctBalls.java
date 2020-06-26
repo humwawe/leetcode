@@ -29,7 +29,7 @@ public class ProbabilityOfATwoBoxesHavingTheSameNumberOfDistinctBalls {
                 for (int j = 0; j < c.length; j++) {
                     c2[j] = balls[j] - c[j];
                 }
-                res = res + helper2(c) * (helper2(c2));
+                res = res + helper2(c) * helper2(c2);
             }
             return;
         }
