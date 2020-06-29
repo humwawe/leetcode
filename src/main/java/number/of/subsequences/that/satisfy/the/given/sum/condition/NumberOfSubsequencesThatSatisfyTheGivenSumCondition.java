@@ -15,7 +15,7 @@ public class NumberOfSubsequencesThatSatisfyTheGivenSumCondition {
     }
 
     private int helper(int[] nums, int i, int j, int target) {
-        int res = 0;
+        long res = 0;
         while (i <= j && nums[i] + nums[j] > target) {
             j--;
         }
@@ -25,8 +25,8 @@ public class NumberOfSubsequencesThatSatisfyTheGivenSumCondition {
         if (i == j) {
             return 1;
         }
-        res += qp(2, j - i - 1, mod) + helper(nums, i + 1, j, target) + helper(nums, i, j - 1, target);
-        return res;
+        res += qp(2, j - i, mod) + helper(nums, i + 1, j, target);
+        return (int) res % mod;
     }
 
     int qp(int m, int k, int p) {
