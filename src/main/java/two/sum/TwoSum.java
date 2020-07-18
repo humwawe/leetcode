@@ -1,4 +1,4 @@
-package tow.sum;
+package two.sum;
 
 /**
  * @author hum

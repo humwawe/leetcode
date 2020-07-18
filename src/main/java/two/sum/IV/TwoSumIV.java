@@ -1,4 +1,4 @@
-package tow.sum.IV;
+package two.sum.IV;
 
 import common.TreeNode;
 
