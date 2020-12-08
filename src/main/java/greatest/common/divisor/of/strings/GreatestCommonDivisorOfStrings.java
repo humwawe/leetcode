@@ -1,7 +1,5 @@
 package greatest.common.divisor.of.strings;
 
-import java.math.BigInteger;
-
 /**
  * @author hum
  */

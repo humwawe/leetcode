@@ -1,6 +1,8 @@
 package transform.to.chessboard;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class TransformToChessboard {
     public int movesToChessboard(int[][] board) {

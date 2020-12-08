@@ -1,8 +1,6 @@
 package partition.array.into.disjoint.intervals;
 
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

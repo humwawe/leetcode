@@ -1,7 +1,5 @@
 package generate.random.point.in.a.circle;
 
-import java.util.Random;
-
 /**
  * @author hum
  */

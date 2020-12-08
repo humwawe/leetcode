@@ -1,7 +1,6 @@
 package construct.target.array.with.multiple.sums;
 
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 /**
  * @author hum

@@ -1,7 +1,5 @@
 package stone.game.II;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

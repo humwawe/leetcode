@@ -1,7 +1,5 @@
 package pizza.with.three.n.slices;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

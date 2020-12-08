@@ -1,7 +1,5 @@
 package wiggle.subsequence;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

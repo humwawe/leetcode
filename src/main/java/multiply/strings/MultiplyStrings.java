@@ -1,8 +1,5 @@
 package multiply.strings;
 
-import java.nio.file.Paths;
-import java.time.temporal.Temporal;
-
 /**
  * @author hum
  */

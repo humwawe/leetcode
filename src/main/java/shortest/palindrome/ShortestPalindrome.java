@@ -1,7 +1,5 @@
 package shortest.palindrome;
 
-import java.util.Collections;
-
 /**
  * @author hum
  */

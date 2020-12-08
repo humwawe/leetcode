@@ -1,6 +1,9 @@
 package rank.transform.of.an.array;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * @author hum

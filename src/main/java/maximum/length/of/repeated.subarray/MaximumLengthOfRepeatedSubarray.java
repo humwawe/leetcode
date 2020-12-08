@@ -1,7 +1,5 @@
 package maximum.length.of.repeated.subarray;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

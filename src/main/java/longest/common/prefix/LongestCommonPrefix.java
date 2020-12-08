@@ -4,7 +4,7 @@ package longest.common.prefix;
  * @author hum
  */
 public class LongestCommonPrefix {
-    public  String longestCommonPrefix(String[] strs) {
+    public String longestCommonPrefix(String[] strs) {
 //        int index = 0, min = Integer.MAX_VALUE;
 //        for (int i = 0; i < strs.length; i++) {
 //            if (min > strs[i].length()) {

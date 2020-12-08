@@ -1,7 +1,5 @@
 package n.queens.II;
 
-import java.util.List;
-
 /**
  * @author hum
  */

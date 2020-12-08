@@ -1,7 +1,5 @@
 package jump.game.V;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

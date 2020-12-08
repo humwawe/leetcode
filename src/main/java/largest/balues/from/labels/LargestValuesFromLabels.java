@@ -1,7 +1,6 @@
 package largest.balues.from.labels;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * @author hum

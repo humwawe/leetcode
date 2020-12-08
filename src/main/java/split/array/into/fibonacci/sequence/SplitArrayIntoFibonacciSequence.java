@@ -1,6 +1,7 @@
 package split.array.into.fibonacci.sequence;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author hum

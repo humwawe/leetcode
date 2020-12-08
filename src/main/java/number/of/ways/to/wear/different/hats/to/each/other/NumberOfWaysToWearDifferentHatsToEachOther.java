@@ -1,7 +1,8 @@
 package number.of.ways.to.wear.different.hats.to.each.other;
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author hum

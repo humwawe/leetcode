@@ -1,7 +1,5 @@
 package valid.parenthesis.string;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

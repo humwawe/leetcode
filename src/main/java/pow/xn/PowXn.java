@@ -1,7 +1,5 @@
 package pow.xn;
 
-import permutations.Permutations;
-
 /**
  * @author hum
  */

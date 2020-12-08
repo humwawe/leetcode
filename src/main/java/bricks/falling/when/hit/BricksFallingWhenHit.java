@@ -1,10 +1,5 @@
 package bricks.falling.when.hit;
 
-import java.util.ArrayDeque;
-import java.util.HashSet;
-import java.util.Queue;
-import java.util.Set;
-
 /**
  * @author hum
  */

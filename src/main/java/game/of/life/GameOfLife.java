@@ -1,7 +1,5 @@
 package game.of.life;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */
@@ -16,7 +14,7 @@ public class GameOfLife {
                 for (int k = -1; k <= 1; k++) {
                     for (int l = -1; l <= 1; l++) {
                         int x = i + k;
-                        int y = j+ l;
+                        int y = j + l;
                         if (x == i && y == j) {
                             continue;
                         }

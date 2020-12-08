@@ -1,7 +1,5 @@
 package score.aftet.flipping.matrix;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

@@ -14,7 +14,7 @@ public class FlattenNestedListIterator implements Iterator<Integer> {
     int index;
 
     public FlattenNestedListIterator(List<NestedInteger> nestedList) {
-        list=new ArrayList<>();
+        list = new ArrayList<>();
         helper(nestedList);
         index = 0;
     }

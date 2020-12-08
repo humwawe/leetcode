@@ -1,7 +1,5 @@
 package reverse.vowels.of.a.string;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

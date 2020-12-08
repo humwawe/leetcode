@@ -1,6 +1,6 @@
 package task.scheduler;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class TaskScheduler {
     public int leastInterval(char[] tasks, int n) {

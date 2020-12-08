@@ -25,7 +25,7 @@ public class MaxSumOfRectangleNoLargerThanK {
         for (int i1 = 0; i1 < row; i1++) {
             for (int i2 = 0; i2 < col; i2++) {
                 for (int j1 = i1; j1 < row; j1++) {
-                    for (int j2 = i2 ; j2 < col; j2++) {
+                    for (int j2 = i2; j2 < col; j2++) {
                         int tmp = helper(i1, i2, j1, j2);
                         if (tmp <= k) {
                             result = Math.max(result, tmp);

@@ -29,6 +29,7 @@ public class RandomFlipMatrix {
         }
 
     }
+
     public void reset() {
         set.clear();
     }

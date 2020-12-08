@@ -71,6 +71,6 @@ public class TimeNeededToInformAllEmployees {
         if (d[i] != -1) {
             return d[i];
         }
-        return d[i] = informTime[i] + helper(manager[i],manager,informTime);
+        return d[i] = informTime[i] + helper(manager[i], manager, informTime);
     }
 }

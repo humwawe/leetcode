@@ -1,6 +1,6 @@
 package reorder.routes.to.make.all.paths.lead.to.the.city.zero;
 
-import java.util.*;
+import java.util.Arrays;
 
 /**
  * @author hum

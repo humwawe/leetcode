@@ -1,7 +1,5 @@
 package insert.interval;
 
-import java.util.Arrays;
-
 /**
  * @author hum
  */

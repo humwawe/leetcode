@@ -1,7 +1,5 @@
 package non.negative.integers.without.consecutive.ones;
 
-import java.util.Arrays;
-
 public class NonNegativeIntegersWithoutConsecutiveOnes {
     private int[][] memo;
 
