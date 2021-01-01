@@ -16,7 +16,7 @@ public class MaximumXorWithAnElementFromArray {
         }
         Arrays.sort(idx, Comparator.comparingInt(x -> queries[x][1]));
         int[] res = new int[len];
-        Trie trie = new Trie(len * 32 + 10);
+        Trie trie = new Trie(nums.length * 32 + 10);
         int j = 0;
         for (int i = 0; i < len; i++) {
             int[] q = queries[idx[i]];
