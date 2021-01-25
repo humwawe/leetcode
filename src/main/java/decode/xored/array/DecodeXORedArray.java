@@ -1,4 +1,4 @@
-package decode.Xored.array;
+package decode.xored.array;
 
 /**
  * @author hum
