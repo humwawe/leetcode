@@ -1,0 +1,8 @@
+package ${PACKAGE};
+
+/**
+ * @author hum
+ */
+public class ${CLASS} {
+
+}
