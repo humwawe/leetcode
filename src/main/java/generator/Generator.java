@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Queries on Number of Points Inside a Circle";
+    static String name = "Maximum XOR for Each Query";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
@@ -21,6 +21,7 @@ public class Generator {
     static {
         name = name.trim();
         keyPkgWord.add("if");
+        keyPkgWord.add("for");
     }
 
     public static void main(String[] args) throws IOException {
