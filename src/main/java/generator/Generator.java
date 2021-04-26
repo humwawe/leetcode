@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Find XOR Sum of All Pairs Bitwise AND";
+    static String name = "Maximum Building Height";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
