@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Number of Ways to Rearrange Sticks With K Sticks Visible";
+    static String name = "Jump Game ";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
