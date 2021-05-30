@@ -8,7 +8,7 @@ public class MinimumSpeedToArriveOnTime {
 
     public int minSpeedOnTime(int[] dist, double hour) {
         int len = dist.length;
-        if (len - 1 > hour) {
+        if (len - 1 >= hour) {
             return -1;
         }
         this.dist = dist;
