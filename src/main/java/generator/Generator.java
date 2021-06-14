@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Minimum Space Wasted From Packaging";
+    static String name = "Merge Triplets to Form Target Triplet  ";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
@@ -22,6 +22,7 @@ public class Generator {
         name = name.trim();
         keyPkgWord.add("if");
         keyPkgWord.add("for");
+        keyPkgWord.add("final");
     }
 
     public static void main(String[] args) throws IOException {
@@ -87,7 +88,7 @@ public class Generator {
             if (s == null || s.isEmpty()) {
                 continue;
             }
-            if (!keyPkgWord.contains(s)) {
+            if (!keyPkgWord.contains(s.toLowerCase())) {
                 res.append(s.toLowerCase()).append(".");
             }
         }
