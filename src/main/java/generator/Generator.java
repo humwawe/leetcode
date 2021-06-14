@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Merge Triplets to Form Target Triplet  ";
+    static String name = "The Earliest and Latest Rounds Where Players Compete";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
