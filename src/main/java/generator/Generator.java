@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "The Earliest and Latest Rounds Where Players Compete";
+    static String name = "Egg Drop With Two Eggs and N Floors";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
@@ -34,9 +34,12 @@ public class Generator {
         templateMap.put("CLASS", clzName);
 
         String outputFile = genOutput(pkgName, clzName);
-
+        File file = new File(outputFile);
+        if (file.exists()) {
+            System.out.println("文件已存在，停止生成");
+        }
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(PROJECT_HOME + File.separator + TEMPLATE)));
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(outputFile))));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)));
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             String s = Util.simpleTemplate(line, templateMap, "");
