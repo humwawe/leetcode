@@ -11,12 +11,14 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Egg Drop With Two Eggs and N Floors";
+    static String name = "Count Ways to Build Rooms in an Ant Colony";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
     static Set<String> keyPkgWord = new HashSet<>();
     static Map<String, String> templateMap = new HashMap<>();
+
+    static final String FILE_EXISTS = "-1";
 
     static {
         name = name.trim();
@@ -34,10 +36,11 @@ public class Generator {
         templateMap.put("CLASS", clzName);
 
         String outputFile = genOutput(pkgName, clzName);
-        File file = new File(outputFile);
-        if (file.exists()) {
+        if (FILE_EXISTS.equals(outputFile)) {
             System.out.println("文件已存在，停止生成");
+            return;
         }
+        File file = new File(outputFile);
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(PROJECT_HOME + File.separator + TEMPLATE)));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)));
         String line;
@@ -68,6 +71,8 @@ public class Generator {
             } else {
                 System.out.println("创建类文件 失败：" + fileName);
             }
+        } else {
+            return FILE_EXISTS;
         }
         return path + File.separator + fileName;
     }
