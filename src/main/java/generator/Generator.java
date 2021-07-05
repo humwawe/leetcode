@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Count Ways to Build Rooms in an Ant Colony";
+    static String name = "Longest Common Subpath";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
