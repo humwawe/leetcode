@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Maximum Number of Points with Cost";
+    static String name = "Maximum Genetic Difference Query";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
