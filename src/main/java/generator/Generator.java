@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Minimum Total Space Wasted With K Resizing Operations";
+    static String name = "Find the Longest Valid Obstacle Course at Each Position";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
