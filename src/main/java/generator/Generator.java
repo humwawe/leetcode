@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Smallest K Length Subsequence With Occurrences of a Letter";
+    static String name = "Partition Array Into Two Arrays to Minimize Sum Difference";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
