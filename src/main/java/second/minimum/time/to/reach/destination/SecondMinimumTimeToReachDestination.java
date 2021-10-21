@@ -41,7 +41,6 @@ public class SecondMinimumTimeToReachDestination {
             Arrays.fill(dist[i], 0x3f3f3f3f);
         }
         dist[1][0] = 0;
-        dist[1][1] = 0;
         Queue<int[]> queue = new ArrayDeque<>();
         queue.add(new int[]{0, 1});
         while (!queue.isEmpty()) {
@@ -59,9 +58,6 @@ public class SecondMinimumTimeToReachDestination {
                     queue.add(new int[]{dist[j][1], j});
                 }
             }
-        }
-        if (dist[n][1] == 0x3f3f3f3f) {
-            return next(next(dist[n][0]));
         }
         return dist[n][1];
     }
