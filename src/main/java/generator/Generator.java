@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Second Minimum Time to Reach Destination";
+    static String name = "Check if an Original String Exists Given Two Encoded Strings";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
