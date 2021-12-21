@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Maximum Fruits Harvested After at Most K Steps";
+    static String name = "Minimum Operations to Make the Array K Increasing";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
