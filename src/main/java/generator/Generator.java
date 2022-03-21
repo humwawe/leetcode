@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-    static String name = "Minimum Weighted Subgraph With the Required Paths";
+    static String name = "Minimum White Tiles After Covering With Carpets";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
