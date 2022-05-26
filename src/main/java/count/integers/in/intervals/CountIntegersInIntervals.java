@@ -1,5 +1,6 @@
 package count.integers.in.intervals;
 
+import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -13,7 +14,8 @@ public class CountIntegersInIntervals {
   }
 
   public void add(int left, int right) {
-    for (var e = map.ceilingEntry(left); e != null && e.getValue() <= right; e = map.ceilingEntry(left)) {
+
+    for (Map.Entry<Integer, Integer> e = map.ceilingEntry(left); e != null && e.getValue() <= right; e = map.ceilingEntry(left)) {
       int l = e.getValue();
       int r = e.getKey();
       left = Math.min(left, l);
