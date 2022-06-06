@@ -2,16 +2,13 @@ package generator;
 
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author hum
  */
 public class Generator {
-    static String name = "Minimum Obstacle Removal to Reach Corner";
+    static String name = "Design a Text Editor";
 
     static final String PROJECT_HOME = "src\\main\\java";
     static final String TEMPLATE = "generator\\template";
