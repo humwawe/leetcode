@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-  static String name = "Naming a Company";
+  static String name = "Selling Pieces of Wood";
 
   static final String PROJECT_HOME = "src\\main\\java";
   static final String TEMPLATE = "generator\\template";
@@ -25,6 +25,7 @@ public class Generator {
     keyPkgWord.add("if");
     keyPkgWord.add("for");
     keyPkgWord.add("final");
+    keyPkgWord.add("case");
   }
 
   public static void main(String[] args) throws IOException {
