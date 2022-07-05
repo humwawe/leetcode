@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-  static String name = "Minimum Score After Removals on a Tree";
+  static String name = "Number of Increasing Paths in a Grid";
 
   static final String PROJECT_HOME = "src\\main\\java";
   static final String TEMPLATE = "generator\\template";
