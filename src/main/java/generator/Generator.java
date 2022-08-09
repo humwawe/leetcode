@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-  static String name = "Longest Cycle in a Graph";
+  static String name = "Longest Ideal Subsequence";
 
   static final String PROJECT_HOME = "src\\main\\java";
   static final String TEMPLATE = "generator\\template";
