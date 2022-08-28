@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-  static String name = "Maximum Segment Sum After Removals";
+  static String name = "Find the K Sum of an Array";
 
   static final String PROJECT_HOME = "src\\main\\java";
   static final String TEMPLATE = "generator\\template";
