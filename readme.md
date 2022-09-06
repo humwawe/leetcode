@@ -47,3 +47,5 @@
 [2201-2300](https://github.com/humwawe/leetcode/blob/master/2201-2300.md)
 ## 2301-2400
 [2301-2400](https://github.com/humwawe/leetcode/blob/master/2301-2400.md)
+## 2401-2500
+[2401-2500](https://github.com/humwawe/leetcode/blob/master/2401-2500.md)
