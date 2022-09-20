@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-  static String name = "Divide Intervals Into Minimum Number of Groups";
+  static String name = "Sum of Prefix Scores of Strings";
 
   static final String PROJECT_HOME = "src\\main\\java";
   static final String TEMPLATE = "generator\\template";
