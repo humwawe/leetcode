@@ -11,7 +11,7 @@ import java.util.Set;
  * @author hum
  */
 public class Generator {
-  static String name = "Paths in Matrix Whose Sum Is Divisible by K";
+  static String name = "Height of Binary Tree After Subtree Removal Queries";
 
   static final String PROJECT_HOME = "src\\main\\java";
   static final String TEMPLATE = "generator\\template";
