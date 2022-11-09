@@ -7,7 +7,7 @@ public class CountSubarraysWithFixedBounds {
   public long countSubarrays(int[] nums, int minK, int maxK) {
     long res = 0L;
     int n = nums.length, minI = -1, maxI = -1, i0 = -1;
-    for (var i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i) {
       int x = nums[i];
       if (x == minK) {
         minI = i;
